@@ -1,14 +1,27 @@
-.input-container {
-    background-color: gray;
-    height: 300px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+/* 
+.calculator {
+    width: 400px;
+    padding: 1rem;
+    border: 1px solid black;
 }
 
 .result-container {
-    height: 50px;
+    height: 4rem;
     border: 1px solid black;
-    text-align: right;
     font-size: 2rem;
     padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+    background-color: rgb(247, 247, 247);
 }
+
+.input-container {
+    width: 100%;
+    background-color: gray;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+} */
