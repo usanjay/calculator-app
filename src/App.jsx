@@ -10,9 +10,20 @@ function App() {
   const [result, setResult] = useState('0');
 
   return (
-    <div className='calculator '>
-      <Result result={result} />
-      <Input result={result} setResult={setResult} setOperand={setOperand} operand={operand} />
+    <div className='flex justify-center items-center h-screen  select-none'>
+      <div className='
+      max-w-xs bg-gray-300 h-8/10 rounded-sm flex flex-col
+      border-gray-200 shadow-xl shadow-gray-500/50 min-w-100 p-3 inset-shadow-sm'>
+        <h1 className="
+          text-center text-3xl place-self-top font-bold text-gray-700 
+        ">Calculator</h1>
+        <Result result={result} />
+        <Input
+          result={result}
+          setResult={setResult}
+          setOperand={setOperand}
+          operand={operand} />
+      </div>
     </div>
   )
 }
