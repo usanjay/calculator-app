@@ -1,7 +1,6 @@
 
 function Input({ result, setResult, operand, setOperand }) {
   const buttonsValues = ['7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '*', '0', '.', '/', 'C', '=']
-  const previousValue = result.charAt(result.length - 1);
 
   const isOperator = (value) => {
     return value === '+' ||
@@ -12,6 +11,7 @@ function Input({ result, setResult, operand, setOperand }) {
   }
 
   const validate = (currentValue) => {
+    const previousValue = result.charAt(result.length - 1);
     if (previousValue === '.' && currentValue === '.') return; // Double Decimals
     if (isOperator(previousValue) && isOperator(currentValue)) return; // Double Operations
     if (currentValue === '.' && operand.includes('.')) return; // Double Decimals in Same Operand
@@ -63,7 +63,7 @@ function Input({ result, setResult, operand, setOperand }) {
     <div className="mt-5 flex-1 rounded-lg inset-shadow-sm p-4 grid grid-cols-4 gap-3">
       {buttonsValues.map((value, index) => {
         return (
-          <button key={index} onClick={() => handleClick(value)} value={value}
+          <button key={index} data-testid="input-button" onClick={() => handleClick(value)} value={value}
             className={`
               bg-gray-500 color-white rounded-md shadow-sm text-xl text-white inset-shadow-sm 
               inset-shadow-gray-600 active:bg-gray-500/90 cursor-pointer active:text-yellow-200
