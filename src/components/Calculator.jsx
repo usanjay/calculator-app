@@ -4,7 +4,7 @@ import { useState } from 'react';
 import isOperator from '../utils/isOperator';
 
 function Calculator() {
-    const [operand, setOperand] = useState('');
+    const [operand, setOperand] = useState('0');
     const [result, setResult] = useState('0');
 
     const validate = (currentValue) => {
